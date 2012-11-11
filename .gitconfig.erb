@@ -1,0 +1,20 @@
+[user]
+	name = <%= ENV['GIT_NAME'] %>
+	email = <%= ENV['GIT_EMAIL'] %>
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = <%= ENV['HOME'] %>/.gitignore
+	editor = mate -w
+	autocrlf = input
+[apply]
+	whitespace = nowarn
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[github]
+	user = <%= ENV['GIT_USER'] %>
+	token = <%= ENV['GIT_TOKEN'] %>
