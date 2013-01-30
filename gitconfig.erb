@@ -9,8 +9,9 @@
 	branch = auto
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
+	editor = subl -w
 	autocrlf = input
+	pager = less -R
 [apply]
 	whitespace = nowarn
 [format]
@@ -18,3 +19,9 @@
 [github]
 	user = <%= ENV['GIT_USER'] %>
 	token = <%= ENV['GIT_TOKEN'] %>
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
