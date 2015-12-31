@@ -1,2 +1,6 @@
+.svn
 *~
-
+.*.swp
+.idea/
+.notes/
+/*.iml
